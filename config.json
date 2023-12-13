@@ -5,7 +5,7 @@
                 "email": "",
                 "nickname": "",
                 "owner": [],
-                "outfit": "<Item name='サイドワインダー' id='CID_348_Athena_Commando_F_Medusa'>",
+                "outfit": "<Item name='Renegade Raider' id='CID_028_Athena_Commando_F' path='AthenaCharacterItemDefinition'/Game/Athena/Items/Cosmetics/Characters/CID_028_Athena_Commando_F.CID_028_Athena_Commando_F''>",
                 "outfit_style": [],
                 "ng_outfits": null,
                 "ng_outfit_for": [
@@ -83,17 +83,15 @@
                 "leave_emote_on": "me",
                 "emote_mimic_for": [],
                 "emote_lock_for": null,
-                "leave_delay_for": 1.0,
+                "leave_delay_for": 0.0,
                 "refresh_on_reload": false,
                 "party": {
                     "privacy": "PUBLIC",
                     "max_size": 16,
                     "allow_swap": true,
-                    "playlist": "<Playlist name='Squads but with no Henchmen' id='Playlist_NoMang_Squads'>",
+                    "playlist": "<Playlist name='VK Play' id='Playlist_VK_Play'>",
                     "disable_voice_chat": false
                 },
-                "avatar_id": "",
-                "avatar_color": "RED",
                 "banner_id": "",
                 "banner_color": "",
                 "level": 9999,
@@ -117,7 +115,7 @@
                     "kick"
                 ],
                 "ng_name_reply": "",
-                "status": "Fortnite-LobbyBot-v2",
+                "status": "✨Use code Pasteloso in the shop!",
                 "accept_invite_for": [
                     "owner"
                 ],
@@ -131,9 +129,11 @@
                     "blacklist"
                 ],
                 "accept_friend_for": [
-                    "owner"
+                    "owner",
+                    "whitelist",
+                    "user"
                 ],
-                "send_friend_request": false,
+                "send_friend_request": true,
                 "whisper_enable_for": [
                     "owner"
                 ],
@@ -144,7 +144,9 @@
                     "kick"
                 ],
                 "accept_join_for": [
-                    "owner"
+                    "owner",
+                    "whitelist",
+                    "user"
                 ],
                 "join_message": [],
                 "join_message_whisper": null,
@@ -174,7 +176,9 @@
                 "botlist_operation": null,
                 "prefix": null,
                 "exec": {
-                    "ready": null,
+                    "ready": [
+                        "await client.process_command(MyMessage(self, DummyMessage(self, None, content='cid CID_028_Athena_Commando_F', author=DummyUser()))"
+                    ],
                     "party_join_request": null,
                     "party_invite": null,
                     "friend_request": null,
@@ -281,7 +285,7 @@
     "api_key": "",
     "discord_log": "",
     "omit_over2000": false,
-    "skip_if_overflow": true,
+    "skip_if_overflow": false,
     "hide_email": true,
     "hide_password": true,
     "hide_token": true,
